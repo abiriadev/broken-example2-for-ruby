@@ -1,0 +1,17 @@
+language: node_js
+
+node_js: – 16.0.0
+
+install: – npm install
+
+script: node ./index.js
+
+before_script: echo befor script
+after_script:
+    - echo after script
+    - echo yeah! success!
+
+env: TOKEN=helloworld PORT=3000
+
+cache:
+    directories: – node_modules
